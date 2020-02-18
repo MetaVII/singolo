@@ -6,3 +6,64 @@ body {
   font-size: 1.2rem;
   font-family: "Lato", Tahoma, sans-serif;
 }
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.header {
+  height: 89px;
+  background-color: #2d303a;
+}
+
+.header--bottom {
+  height: 6px;
+  background-color: #323746;
+}
+
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.logo {
+  display: inline;
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: -1px;
+}
+
+.red {
+  color: #f06c64;
+}
+
+.nav__links {
+  display: flex;
+  width: 370px;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+
+.nav__point {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.nav__point:hover {
+  color: #f06c64;
+}
