@@ -7,6 +7,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
     <link rel="stylesheet" href="singolo1.css" />
     <title>Singolo</title>
   </head>
@@ -43,9 +47,18 @@
         <div class="header--bottom"></div>
       </header>
       <main>
-        <div class="slider">
-          <div class="wrapper"></div>
-        </div>
+        <section class="slider">
+          <h2 class="visually-hidden">slider</h2>
+          <div class="wrapper slider-content">
+            <span class="slider__arrow slider__arrow--left"></span>
+            <span class="slider__phone slider__phone--vertical"> </span>
+            <span class="slider__shadow slider__shadow--vertical"></span>
+            <span class="slider__picture-container"></span>
+            <div class="slider__phone slider__phone--horizontal"></div>
+            <span class="slider__shadow slider__shadow--horizontal"></span>
+            <span class="slider__arrow slider__arrow--right"></span>
+          </div>
+        </section>
         <div class="services">
           <div class="wrapper">
             <h2>Our Services</h2>

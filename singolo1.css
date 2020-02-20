@@ -1,3 +1,18 @@
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+}
+
 html {
   font-size: 10px;
 }
@@ -14,11 +29,13 @@ body {
 
 .header {
   height: 89px;
+
   background-color: #2d303a;
 }
 
 .header--bottom {
   height: 6px;
+
   background-color: #323746;
 }
 
@@ -40,10 +57,11 @@ body {
 
 .logo {
   display: inline;
+
   font-weight: 700;
   font-size: 2.5rem;
-  text-transform: uppercase;
   color: #ffffff;
+  text-transform: uppercase;
   letter-spacing: -1px;
 }
 
@@ -53,17 +71,105 @@ body {
 
 .nav__links {
   display: flex;
-  width: 370px;
   justify-content: space-between;
+  width: 370px;
   padding-top: 12px;
 }
 
 .nav__point {
   font-weight: 700;
-  text-transform: uppercase;
   color: #ffffff;
+  text-transform: uppercase;
 }
 
 .nav__point:hover {
   color: #f06c64;
+}
+
+.slider {
+  height: 594px;
+
+  background-color: #f06c64;
+}
+
+.slider-content {
+  position: relative;
+
+  display: flex;
+  height: 100%;
+}
+
+.slider__arrow {
+  display: inline-block;
+  margin-top: 281px;
+
+  cursor: pointer;
+}
+
+.slider__arrow--left {
+  margin-left: 2px;
+}
+
+.slider__arrow--left::before {
+  content: url("assets/img/arrow.svg");
+}
+
+.slider__arrow--right {
+  margin-left: auto;
+
+  transform: rotateY(180deg);
+}
+
+.slider__arrow--right::before {
+  content: url("assets/img/arrow.svg");
+}
+
+.slider__phone {
+  position: absolute;
+  z-index: 1;
+}
+
+.slider__phone::after {
+  content: url("assets/img/phone.png");
+}
+
+.slider__phone--vertical {
+  top: 53px;
+  left: 72px;
+}
+
+.slider__phone--horizontal {
+  top: 52px;
+  left: 505px;
+
+  transform: rotate(90deg);
+}
+
+.slider__shadow {
+  position: absolute;
+}
+
+.slider__shadow::before {
+  content: url("assets/img/shadow.png");
+}
+
+.slider__shadow--vertical {
+  top: 53px;
+  left: 72px;
+}
+
+.slider__shadow--horizontal {
+  top: 52px;
+  left: 508px;
+
+  transform: rotate3d(1, 1, 0, 180deg);
+}
+
+.slider__picture-container {
+  width: 188px;
+  height: 333px;
+  margin-top: 118px;
+  margin-left: 68px;
+
+  background-image: url("assets/img/img1.png");
 }
