@@ -127,10 +127,12 @@ body {
 .slider__phone {
   position: absolute;
   z-index: 1;
-}
 
-.slider__phone::after {
-  content: url("assets/img/phone.png");
+  width: 215px;
+  height: 460px;
+
+  background-image: url("assets/img/phone.png");
+  background-repeat: no-repeat;
 }
 
 .slider__phone--vertical {
@@ -147,10 +149,12 @@ body {
 
 .slider__shadow {
   position: absolute;
-}
 
-.slider__shadow::before {
-  content: url("assets/img/shadow.png");
+  width: 240px;
+  height: 485px;
+
+  background-image: url("assets/img/shadow.png");
+  background-repeat: no-repeat;
 }
 
 .slider__shadow--vertical {
@@ -165,11 +169,28 @@ body {
   transform: rotate3d(1, 1, 0, 180deg);
 }
 
-.slider__picture-container {
+.slider__picture-vertical {
+  position: absolute;
+  top: 118px;
+  left: 86px;
+  z-index: 1;
+
   width: 188px;
   height: 333px;
-  margin-top: 118px;
-  margin-left: 68px;
 
   background-image: url("assets/img/img1.png");
+  background-position: -14px -135px;
+}
+
+.slider__picture-horizontal {
+  position: absolute;
+  top: 188px;
+  left: 445px;
+  z-index: 1;
+
+  width: 333px;
+  height: 188px;
+
+  background-image: url(assets/img/img2.png);
+  background-position: -125px -119px;
 }
