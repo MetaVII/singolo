@@ -82,6 +82,11 @@ body {
   text-transform: uppercase;
 }
 
+.nav__separator {
+  color: #494e62;
+}
+
+.nav__point--active,
 .nav__point:hover {
   color: #f06c64;
 }
@@ -99,11 +104,12 @@ body {
 }
 
 .slider__arrow {
-  display: inline-block;
   position: absolute;
+  top: 274px;
+
+  display: inline-block;
   width: 40px;
   height: 40px;
-  top: 274px;
 
   background-image: url(assets/img/arrow.svg);
   background-repeat: no-repeat;
@@ -205,4 +211,116 @@ body {
   height: 6px;
 
   background-color: #ea676b;
+}
+
+.services {
+  box-sizing: border-box;
+  height: 501px;
+  padding-top: 62px;
+
+  background-color: #f2f2f2;
+}
+
+.services__content {
+  height: 432px;
+}
+
+.services__header {
+  margin-bottom: 23px;
+
+  font-weight: 900;
+  font-size: 3rem;
+  color: #666d89;
+}
+
+.services__paragraph {
+  height: 60px;
+  margin-bottom: 45px;
+  overflow: hidden;
+
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: #767e9e;
+}
+
+.column-3 {
+  display: grid;
+
+  grid-auto-rows: 87px;
+  grid-column-gap: 19px;
+  grid-row-gap: 36px;
+  grid-template-columns: repeat(3, 300px);
+}
+
+.services__img-container {
+  display: inline-block;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  width: 59px;
+  height: 59px;
+  margin-right: 20px;
+  margin-left: 1px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 2px solid #666d89;
+  border-radius: 50%;
+}
+
+.services__img-container--pen {
+  background-image: url("assets/img/pen.svg");
+}
+
+.services__img-container--bulb {
+  background-image: url("assets/img/bulb.svg");
+}
+
+.services__img-container--heart {
+  margin-right: 22px;
+  margin-left: 2px;
+
+  background-image: url("assets/img/heart.svg");
+}
+
+.services__img-container--phone {
+  background-image: url("assets/img/phone.svg");
+}
+
+.services__img-container--bubble {
+  background-image: url("assets/img/bubble.svg");
+}
+
+.services__img-container--star {
+  margin-right: 22px;
+  margin-left: 2px;
+
+  background-image: url("assets/img/star.svg");
+}
+
+.services__tile {
+  display: flex;
+  overflow: hidden;
+}
+
+.services__tile-header {
+  margin-top: -2px;
+  margin-bottom: 10px;
+
+  font-weight: 900;
+  font-size: 18px;
+  color: #666d89;
+}
+
+.services__tile-text {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 22px;
+  color: #767e9e;
+}
+
+.services-bottom {
+  height: 6px;
+
+  background-color: #ffffff;
 }
