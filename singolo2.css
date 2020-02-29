@@ -170,6 +170,10 @@ body {
   border-radius: 50%;
 }
 
+.social__link:hover {
+  background-color: #ffffff;
+}
+
 .about-us__bottom {
   height: 6px;
 
