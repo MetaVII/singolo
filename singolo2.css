@@ -27,7 +27,7 @@ body {
   padding-top: 63px;
 }
 
-.portfolio__header-margin {
+.header-margin {
   margin-bottom: 23px;
 }
 
@@ -106,4 +106,72 @@ body {
 
 .portfolio__img {
   cursor: pointer;
+}
+
+.about-us {
+  background-color: #f2f2f2;
+}
+
+.about-us__content {
+  padding-top: 62px;
+}
+
+.about-us__employees-container {
+  margin-bottom: 67px;
+  padding-top: 43px;
+}
+
+.employees {
+  display: grid;
+
+  column-gap: 19px;
+
+  grid-template-columns: repeat(3, 300px);
+}
+
+.employees__photo {
+  margin-bottom: 15px;
+}
+
+.employees__name {
+  display: block;
+  margin-bottom: 10px;
+  overflow: hidden;
+
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #666d89;
+}
+
+.employees__info {
+  display: block;
+  margin-bottom: 21px;
+  overflow: hidden;
+
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #767e9e;
+}
+
+.social {
+  display: flex;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  margin-right: 8px;
+
+  border: 1px solid #666d89;
+  border-radius: 50%;
+}
+
+.about-us__bottom {
+  height: 6px;
+
+  background-color: #ffffff;
 }
