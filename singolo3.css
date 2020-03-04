@@ -1,0 +1,158 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.2rem;
+  font-family: "Lato", Tahoma, sans-serif;
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.feedback {
+  background-color: #f06c64;
+}
+
+.feedback__content {
+  padding-top: 62px;
+}
+
+.section-header {
+  font-weight: 900;
+  font-size: 3rem;
+  color: #666d89;
+}
+
+.section-header--feedback {
+  color: #f0d8d9;
+}
+
+.section-text {
+  overflow: hidden;
+
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 30px;
+  color: #767e9e;
+}
+
+.section-text--feedback {
+  color: #f0d8d9;
+}
+
+.feedback__text-margin {
+  margin-bottom: 42px;
+}
+
+.header-margin {
+  margin-bottom: 23px;
+}
+
+.feedback__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback__input {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+
+  font-size: 1.2rem;
+  color: #f0d8d9;
+
+  background-color: #d6564f;
+  border: none;
+  border-radius: 5px;
+}
+
+.feedback__textarea::placeholder,
+.feedback__input::placeholder {
+  color: #f48c8f;
+}
+
+.feedback__textarea {
+  height: 180px;
+  margin-bottom: 16px;
+  padding: 11px 14px;
+
+  font-size: 1.2rem;
+  font-family: "Lato", Tahoma, sans-serif;
+  color: #f0d8d9;
+
+  background-color: #d6564f;
+  border: none;
+  border-radius: 5px;
+
+  resize: none;
+}
+
+.feedback__2-column {
+  display: grid;
+
+  grid-column-gap: 21px;
+  grid-template-columns: 619px 1fr;
+}
+
+.contacts__header {
+  margin-bottom: 10px;
+
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: #f0d8d9;
+}
+
+.contacts__text {
+  margin-bottom: 21px;
+
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #f0d8d9;
+}
+
+.contacts__text-line {
+  display: block;
+
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  color: #f0d8d9;
+  text-decoration: none;
+}
+
+.contacts__icon {
+  display: inline-block;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts__icon--location {
+  width: 7px;
+  height: 11px;
+  margin-right: 10px;
+
+  background-image: url("assets/img/location.svg");
+}
+
+.contacts__icon--phone {
+  width: 11px;
+  height: 11px;
+  margin-right: 8px;
+
+  background-image: url("assets/img/phone-contacts.svg");
+}
+
+.contacts__icon-mail {
+  width: 13px;
+  height: 8px;
+  margin-right: 7px;
+
+  background-image: url("assets/img/mail.svg");
+}
