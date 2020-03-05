@@ -18,6 +18,8 @@ body {
 }
 
 .feedback {
+  padding-bottom: 10px;
+
   background-color: #f06c64;
 }
 
@@ -101,6 +103,19 @@ body {
   grid-template-columns: 619px 1fr;
 }
 
+.feedback__button {
+  align-self: flex-start;
+  padding: 12px;
+
+  font-family: "Lato", Tahoma, sans-serif;
+  color: #f0d8d9;
+
+  background-color: #d6564f;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
 .contacts__header {
   margin-bottom: 10px;
 
@@ -155,4 +170,50 @@ body {
   margin-right: 7px;
 
   background-image: url("assets/img/mail.svg");
+}
+
+.feedback-bottom {
+  height: 6px;
+
+  background-color: #ea676b;
+}
+
+.footer {
+  padding: 21px 0;
+
+  background-color: #2d303a;
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 31px;
+  height: 31px;
+  margin-right: 8px;
+
+  border: 1px solid #666d89;
+  border-radius: 50%;
+}
+
+.social > li:last-child > a {
+  margin-right: 0;
+}
+
+.social__link:hover {
+  background-color: #ffffff;
+}
+
+.footer__copyright {
+  color: #666d89;
 }
