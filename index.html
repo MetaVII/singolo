@@ -52,15 +52,24 @@
         <main>
           <section class="slider">
             <h2 class="visually-hidden">slider</h2>
-            <div class="wrapper slider-content">
-              <span class="slider__arrow slider__arrow--left"></span>
-              <span class="slider__phone slider__phone--vertical"> </span>
-              <span class="slider__shadow slider__shadow--vertical"></span>
-              <span class="slider__picture-vertical"></span>
-              <span class="slider__phone slider__phone--horizontal"></span>
-              <span class="slider__shadow slider__shadow--horizontal"></span>
-              <span class="slider__picture-horizontal"></span>
-              <span class="slider__arrow slider__arrow--right"></span>
+            <button id="arrowL" class="slider__arrow slider__arrow--left"></button>
+            <button id="arrowR" class="slider__arrow slider__arrow--right"></button>
+            <div class="slider__slide slider__slide1 fade">
+              <div class="wrapper slider-content">
+                <div class="slider__phone-container">
+                  <span class="slider__phone slider__phone--vertical"></span>
+                  <span class="slider__picture slider__picture-vertical"></span>
+                </div>
+                <span class="slider__shadow slider__shadow--vertical"></span>
+                <div class="slider__phone-container">
+                  <span class="slider__phone slider__phone--horizontal"></span>
+                  <span class="slider__picture slider__picture-horizontal"></span>
+                </div>
+                <span class="slider__shadow slider__shadow--horizontal"></span>
+              </div>
+            </div>
+            <div class="slider__slide slider__slide2 fade">
+              <div class="slider-content"></div>
             </div>
             <div class="slider-bottom"></div>
           </section>
@@ -166,15 +175,15 @@
               </p>
               <ul class="portfolio__tag-container">
                 <li class="portfolio__tag portfolio__tag--active">All</li>
-                <li class="portfolio__tag portfolio__tag--web">Web Design</li>
-                <li class="portfolio__tag portfolio__tag--graphic">
+                <li class="portfolio__tag">Web Design</li>
+                <li class="portfolio__tag">
                   Graphic Design
                 </li>
                 <li class="portfolio__tag">Artwork</li>
               </ul>
-              <div class="column-4">
+              <div id="portfolioImgs" class="column-4">
                 <img
-                  class="portfolio__img"
+                  class="portfolio__img portfolio__img--active"
                   src="assets/img/portfolio1.png"
                   alt="image"
                   width="221"
