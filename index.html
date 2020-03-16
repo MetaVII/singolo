@@ -472,12 +472,14 @@
                     type="text"
                     name="subject"
                     placeholder="Subject"
+                    maxlength="50"
                   />
                   <textarea
                     id="describe"
                     class="feedback__textarea"
                     name="project"
                     placeholder="Describe your project in detail..."
+                    maxlength="200"
                   ></textarea>
                   <button id="submit" class="feedback__button" type="submit">Submit</button>
                 </form>
@@ -556,7 +558,10 @@
       </div>
       <div id="message" class="message-block message-block--hidden">
         <div class="message">
+          <h2>Письмо отправлено</h2>
           <p id="message-subject"></p>
+          <p id="message-describe" class="message-input"></p>
+          <button id="message-close">OK</button>
         </div>
       </div>
       <script src="script.js"></script>

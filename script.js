@@ -77,9 +77,27 @@ PORTFOLIO_IMGS.addEventListener("click", event => {
 
 //form
 const MESSAGE = document.querySelector("#message");
+const MESSAGE_SUBJECT = document.querySelector("#message-subject");
+const MESSAGE_DESCRIBE = document.querySelector("#message-describe");
+const SUBJECT = document.querySelector("#subject");
+const DESCRIBE = document.querySelector("#describe");
 const SUBMIT = document
   .querySelector("#submit")
   .addEventListener("click", e => {
     e.preventDefault();
+    SUBJECT.value
+      ? (MESSAGE_SUBJECT.innerText = `Тема: ${SUBJECT.value}`)
+      : (MESSAGE_SUBJECT.innerText = "Без темы");
+    DESCRIBE.value
+      ? (MESSAGE_DESCRIBE.innerText = `Описание: ${DESCRIBE.value}`)
+      : (MESSAGE_DESCRIBE.innerText = "Без описания");
     MESSAGE.classList.remove("message-block--hidden");
+  });
+
+const CLOSE = document
+  .querySelector("#message-close")
+  .addEventListener("click", e => {
+    MESSAGE_SUBJECT.innerText = "";
+    MESSAGE_DESCRIBE.innerText = "";
+    MESSAGE.classList.add("message-block--hidden");
   });
