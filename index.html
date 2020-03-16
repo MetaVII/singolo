@@ -467,17 +467,19 @@
                     placeholder="Email (Required)"
                   />
                   <input
+                    id="subject"
                     class="feedback__input"
                     type="text"
                     name="subject"
                     placeholder="Subject"
                   />
                   <textarea
+                    id="describe"
                     class="feedback__textarea"
                     name="project"
                     placeholder="Describe your project in detail..."
                   ></textarea>
-                  <button class="feedback__button" type="submit">Submit</button>
+                  <button id="submit" class="feedback__button" type="submit">Submit</button>
                 </form>
                 <div class="contacts">
                   <h3 class="contacts__header">Contact Information</h3>
@@ -551,6 +553,11 @@
             </ul>
           </div>
         </footer>
+      </div>
+      <div id="message" class="message-block message-block--hidden">
+        <div class="message">
+          <p id="message-subject"></p>
+        </div>
       </div>
       <script src="script.js"></script>
   </body>

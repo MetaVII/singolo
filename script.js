@@ -74,3 +74,12 @@ PORTFOLIO_IMGS.addEventListener("click", event => {
   );
   event.target.classList.add("portfolio__img--active");
 });
+
+//form
+const MESSAGE = document.querySelector("#message");
+const SUBMIT = document
+  .querySelector("#submit")
+  .addEventListener("click", e => {
+    e.preventDefault();
+    MESSAGE.classList.remove("message-block--hidden");
+  });

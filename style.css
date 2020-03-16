@@ -718,3 +718,24 @@ body {
 
   color: #666d89;
 }
+
+.message-block {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #0008;
+}
+
+.message-block--hidden {
+  display: none;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid black;
+  text-align: center;
+}
