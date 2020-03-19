@@ -11,6 +11,37 @@ NAVIGATION.addEventListener("click", event => {
   event.target.classList.add("nav__point--active");
 });
 
+const NAVIGATION_ITEMS = document.querySelectorAll(".nav__point");
+const HOME_BLOCK_HEIGHT = document.querySelector("#home").offsetHeight;
+
+document.addEventListener("scroll", e => {
+  const currentPosition = window.scrollY;
+
+  NAVIGATION_ITEMS.forEach(item => {
+    const block = document.querySelector(item.getAttribute("href"));
+    if (
+      currentPosition + HOME_BLOCK_HEIGHT >= block.offsetTop &&
+      currentPosition < block.offsetTop + block.offsetHeight
+    ) {
+      NAVIGATION_ITEMS.forEach(item =>
+        item.classList.remove("nav__point--active")
+      );
+      item.classList.add("nav__point--active");
+    }
+
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+      // you're at the bottom of the page
+      NAVIGATION_ITEMS.forEach(item =>
+        item.classList.remove("nav__point--active")
+      );
+
+      document
+        .querySelector(".nav__point[href='#contact']")
+        .classList.add("nav__point--active");
+    }
+  });
+});
+
 //slider carousel
 const SLIDES = document.querySelectorAll(".slider__slide");
 const ARROWL = document
