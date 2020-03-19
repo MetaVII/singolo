@@ -43,36 +43,58 @@ document.addEventListener("scroll", e => {
 });
 
 //slider carousel
+let currentItem = 0;
+let isEnabled = true;
+
 const SLIDES = document.querySelectorAll(".slider__slide");
+
 const ARROWL = document
   .querySelector("#arrowL")
-  .addEventListener("click", e => plusSlides(-1));
+  .addEventListener("click", e => {
+    if (isEnabled) {
+      previousItem(currentItem);
+    }
+  });
+
 const ARROWR = document
   .querySelector("#arrowR")
-  .addEventListener("click", e => plusSlides(1));
+  .addEventListener("click", e => {
+    if (isEnabled) {
+      nextItem(currentItem);
+    }
+  });
 
-let slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function nextItem(n) {
+  hideItem("to-left");
+  changeCurrentItem(n + 1);
+  showItem("from-right");
 }
 
-function showSlides(n) {
-  let i;
-  if (n > SLIDES.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = SLIDES.length;
-  }
+function previousItem(n) {
+  hideItem("to-right");
+  changeCurrentItem(n - 1);
+  showItem("from-left");
+}
 
-  for (let index = 0; index < SLIDES.length; index++) {
-    const element = SLIDES[index];
-    element.style.display = "none";
-  }
+function changeCurrentItem(n) {
+  currentItem = (n + SLIDES.length) % SLIDES.length;
+}
 
-  SLIDES[slideIndex - 1].style.display = "block";
+function hideItem(direction) {
+  isEnabled = false;
+  SLIDES[currentItem].classList.add(direction);
+  SLIDES[currentItem].addEventListener("animationend", function() {
+    this.classList.remove("slider__active", direction);
+  });
+}
+
+function showItem(direction) {
+  SLIDES[currentItem].classList.add("slider__next", direction);
+  SLIDES[currentItem].addEventListener("animationend", function() {
+    this.classList.remove("slider__next", direction);
+    this.classList.add("slider__active");
+    isEnabled = true;
+  });
 }
 
 //phone turn on/off
@@ -107,6 +129,7 @@ PORTFOLIO_IMGS.addEventListener("click", event => {
 });
 
 //form
+//form.checkValidity()
 const MESSAGE = document.querySelector("#message");
 const MESSAGE_SUBJECT = document.querySelector("#message-subject");
 const MESSAGE_DESCRIBE = document.querySelector("#message-describe");

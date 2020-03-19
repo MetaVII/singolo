@@ -15,6 +15,7 @@
 
 html {
   font-size: 10px;
+
   scroll-behavior: smooth;
 }
 
@@ -103,6 +104,7 @@ body {
   position: relative;
 
   height: 600px;
+  overflow: hidden;
 }
 
 .slider-content {
@@ -126,6 +128,7 @@ body {
   background-repeat: no-repeat;
   background-position: 43%;
   border: none;
+
   /* border-radius: 50%; */
   cursor: pointer;
 }
@@ -141,7 +144,23 @@ body {
 }
 
 .slider__slide {
+  position: relative;
+
   display: none;
+
+  animation: 0.5s ease-in-out;
+}
+
+.slider__next,
+.slider__active {
+  display: block;
+}
+
+.slider__next {
+  position: absolute;
+  top: 0;
+
+  width: 100%;
 }
 
 .slider__slide1 {
@@ -152,27 +171,39 @@ body {
   background-image: url(assets/img/slide2.png);
 }
 
-/* Fading animation */
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
+.to-left {
+  animation-name: left;
 }
 
-@-webkit-keyframes fade {
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
   from {
-    opacity: 0.4;
+    left: 0;
   }
   to {
-    opacity: 1;
+    left: -100%;
   }
 }
 
-@keyframes fade {
+@keyframes right {
   from {
-    opacity: 0.4;
+    left: 100%;
   }
   to {
-    opacity: 1;
+    left: 0;
   }
 }
 
@@ -748,6 +779,7 @@ body {
   width: 20%;
   margin: 15% auto;
   padding: 10px;
+
   font-size: 1.4rem;
 
   background-color: #fefefe;
