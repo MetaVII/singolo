@@ -1,15 +1,15 @@
 //navigation
-const NAVIGATION = document.querySelector("#navigation");
-NAVIGATION.addEventListener("click", event => {
-  if (event.target.nodeName !== "A") {
-    return;
-  }
+// const NAVIGATION = document.querySelector("#navigation");
+// NAVIGATION.addEventListener("click", event => {
+//   if (event.target.nodeName !== "A") {
+//     return;
+//   }
 
-  NAVIGATION.querySelectorAll("A").forEach(item =>
-    item.classList.remove("nav__point--active")
-  );
-  event.target.classList.add("nav__point--active");
-});
+//   NAVIGATION.querySelectorAll("A").forEach(item =>
+//     item.classList.remove("nav__point--active")
+//   );
+//   event.target.classList.add("nav__point--active");
+// });
 
 const NAVIGATION_ITEMS = document.querySelectorAll(".nav__point");
 const HOME_BLOCK_HEIGHT = document.querySelector("#home").offsetHeight;
@@ -129,7 +129,7 @@ PORTFOLIO_IMGS.addEventListener("click", event => {
 });
 
 //form
-//form.checkValidity()
+const FORM = document.querySelector(".feedback__form");
 const MESSAGE = document.querySelector("#message");
 const MESSAGE_SUBJECT = document.querySelector("#message-subject");
 const MESSAGE_DESCRIBE = document.querySelector("#message-describe");
@@ -138,6 +138,10 @@ const DESCRIBE = document.querySelector("#describe");
 const SUBMIT = document
   .querySelector("#submit")
   .addEventListener("click", e => {
+    if (!FORM.checkValidity()) {
+      return;
+    }
+
     e.preventDefault();
     SUBJECT.value
       ? (MESSAGE_SUBJECT.innerText = `Тема: ${SUBJECT.value}`)
@@ -151,7 +155,6 @@ const SUBMIT = document
 const CLOSE = document
   .querySelector("#message-close")
   .addEventListener("click", e => {
-    MESSAGE_SUBJECT.innerText = "";
-    MESSAGE_DESCRIBE.innerText = "";
+    FORM.reset();
     MESSAGE.classList.add("message-block--hidden");
   });
