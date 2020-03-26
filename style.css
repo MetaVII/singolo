@@ -25,8 +25,15 @@ body {
 }
 
 .container {
-  width: 1020px;
+  max-width: 1020px;
   margin: 0 auto;
+}
+
+@media (max-width: 1019px) {
+  .container {
+    /* width: 768px; */
+    width: 100%;
+  }
 }
 
 #home {
@@ -48,8 +55,7 @@ body {
 }
 
 .wrapper {
-  width: 940px;
-  margin: 0 auto;
+  padding: 0 40px;
 }
 
 .header__content {
@@ -287,14 +293,21 @@ body {
 
 .services {
   box-sizing: border-box;
-  height: 500px;
-  padding-top: 62px;
+  /* height: 500px; */
+  padding: 62px 0 68px 0;
 
   background-color: #f2f2f2;
+  border-bottom: 6px solid white;
+}
+
+@media (max-width: 1019px) {
+  .services {
+    padding-top: 40px;
+  }
 }
 
 .services__content {
-  height: 432px;
+  /* height: 432px; */
 }
 
 .services__header {
@@ -317,13 +330,21 @@ body {
   color: #767e9e;
 }
 
-.column-3 {
+.services__column-layout {
   display: grid;
 
   grid-auto-rows: 87px;
   grid-column-gap: 19px;
   grid-row-gap: 36px;
   grid-template-columns: repeat(3, 300px);
+  justify-content: space-between;
+}
+
+@media (max-width: 1019px) {
+  .services__column-layout {
+    grid-template-columns: repeat(2, 300px);
+    grid-gap: 53px;
+  }
 }
 
 .services__img-container {
@@ -400,7 +421,7 @@ body {
 }
 
 .portfolio {
-  height: 869px;
+  /* height: 869px; */
 
   background-color: #2d303a;
 }
@@ -447,15 +468,20 @@ body {
   border-color: #dedede;
 }
 
-.column-4 {
+.portfolio__column-layout {
   display: grid;
-  height: 601px;
   overflow: hidden;
 
   column-gap: 21px;
 
   grid-template-columns: repeat(4, 220px);
   row-gap: 20px;
+}
+
+@media (max-width: 1019px) {
+  .portfolio__column-layout {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .portfolio-bottom {
@@ -469,6 +495,7 @@ body {
   box-sizing: border-box;
 
   cursor: pointer;
+  width: 100%;
 }
 
 .portfolio__img--active {
@@ -493,11 +520,12 @@ body {
 
   column-gap: 19px;
 
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .employees__photo {
   margin-bottom: 15px;
+  width: 100%;
 }
 
 .employees__name {
@@ -551,13 +579,19 @@ body {
 }
 
 .feedback {
-  padding-bottom: 10px;
-
   background-color: #f06c64;
 }
 
 .feedback__content {
   padding-top: 62px;
+  padding-bottom: 62px;
+}
+
+@media (max-width: 1019px) {
+  .feedback__content {
+    padding-top: 54px;
+    padding-bottom: 38px;
+  }
 }
 
 .section-header {
@@ -639,7 +673,7 @@ body {
   display: grid;
 
   grid-column-gap: 21px;
-  grid-template-columns: 619px 1fr;
+  grid-template-columns: 1fr 32%;
 }
 
 .feedback__button {
