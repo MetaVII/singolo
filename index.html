@@ -15,7 +15,7 @@
     <div class="container">
         <header id="home">
           <div class="header">
-            <div class="wrapper header__content">
+            <div class="header__content">
               <a class="link" href="#">
                 <h1 class="logo">singolo</h1>
                 <span class="logo red">*</span>
@@ -55,23 +55,26 @@
             <button id="arrowL" class="slider__arrow slider__arrow--left"></button>
             <button id="arrowR" class="slider__arrow slider__arrow--right"></button>
             <div class="slider__slide slider__active slider__slide1">
-              <div class="wrapper slider-content">
                 <div class="slider__phone-container">
-                  <span class="slider__phone slider__phone--vertical"></span>
-                  <span class="slider__picture slider__picture-vertical"></span>
+                  <div class="slider__shadow slider__shadow--vertical"></div>
+                  <div class="slider__phone slider__phone--vertical">
+                    <div class="slider__phone-inner-wrapper">
+                      <div class="slider__picture slider__picture-vertical"></div>
+                    </div>
+                  </div>
                 </div>
-                <span class="slider__shadow slider__shadow--vertical"></span>
                 <div class="slider__phone-container">
-                  <span class="slider__phone slider__phone--horizontal"></span>
-                  <span class="slider__picture slider__picture-horizontal"></span>
+                  <div class="slider__shadow slider__shadow--horizontal"></div>
+                  <div class="slider__phone slider__phone--horizontal">
+                    <div class="slider__phone-inner-wrapper">
+                      <div class="slider__picture slider__picture-horizontal"></div>
+                    </div>
+                  </div>
                 </div>
-                <span class="slider__shadow slider__shadow--horizontal"></span>
-              </div>
             </div>
             <div class="slider__slide slider__slide2">
-              <div class="slider-content"></div>
+              <img src="/assets/img/slide2.png" alt="slide2" class="slider__img" />
             </div>
-            <div class="slider-bottom"></div>
           </section>
           <section id="services" class="services">
             <div class="wrapper services__content">
@@ -277,7 +280,7 @@
                 tortor mauris condimentum nibh.
               </p>
               <div class="employees about-us__employees-container">
-                <div>
+                <div class="employees__card">
                   <img
                     class="employees__photo"
                     src="assets/img/photo1.jpg"
@@ -329,7 +332,7 @@
                     </li>
                   </ul>
                 </div>
-                <div>
+                <div class="employees__card">
                   <img
                     class="employees__photo"
                     src="assets/img/photo2.jpg"
@@ -381,7 +384,7 @@
                     </li>
                   </ul>
                 </div>
-                <div style="margin-left: 1px;">
+                <div class="employees__card">
                   <img
                     class="employees__photo"
                     src="assets/img/photo3.jpg"
