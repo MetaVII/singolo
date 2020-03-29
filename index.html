@@ -12,10 +12,11 @@
     <title>Singolo</title>
   </head>
   <body>
-    <div class="container">
-        <header id="home">
+    <div id="home" class="container">
+        <header class="header-container">
           <div class="header">
             <div class="header__content">
+              <button id="burger-button-open" class="burger__button"><img src="assets/img/burger-menu.svg" alt="burger-menu"/></button>
               <a class="link" href="#">
                 <h1 class="logo">singolo</h1>
                 <span class="logo red">*</span>
@@ -564,6 +565,24 @@
           <p id="message-subject"></p>
           <p id="message-describe" class="message-input"></p>
           <button id="message-close">OK</button>
+        </div>
+      </div>
+      <div id="mobile-nav" class="mobile-nav">
+        <div class="mobile-nav__container">
+          <div class="mobile-nav__header">
+            <button id="burger-button-close" class="burger__button burger__button--rotate"><img src="assets/img/burger-menu.svg" alt="burger-menu"/></button>
+            <a class="link mobile-nav__logo" href="#">
+              <span class="logo">singolo</span>
+              <span class="logo red">*</span>
+            </a>
+          </div>
+          <div class="mobile-nav__links-container">
+            <a class="mobile-nav__link" href="#home">home</a>
+            <a class="mobile-nav__link" href="#services">services</a>
+            <a class="mobile-nav__link" href="#portfolio">portfolio</a>
+            <a class="mobile-nav__link" href="#about">about</a>
+            <a class="mobile-nav__link" href="#contact">contact</a>
+          </div>
         </div>
       </div>
       <script src="script.js"></script>

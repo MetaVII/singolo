@@ -12,7 +12,8 @@
 // });
 
 const NAVIGATION_ITEMS = document.querySelectorAll(".nav__point");
-const HOME_BLOCK_HEIGHT = document.querySelector("#home").offsetHeight;
+const HOME_BLOCK_HEIGHT = document.querySelector(".header-container")
+  .offsetHeight;
 
 document.addEventListener("scroll", e => {
   const currentPosition = window.scrollY;
@@ -38,6 +39,43 @@ document.addEventListener("scroll", e => {
       document
         .querySelector(".nav__point[href='#contact']")
         .classList.add("nav__point--active");
+    }
+  });
+});
+
+//mobile navigation
+const MOBILE_NAVIGATION_WINDOW = document.querySelector("#mobile-nav");
+const BURGER_MENU_BUTTON_OPEN = document.querySelector("#burger-button-open");
+const BURGER_MENU_BUTTON_CLOSE = document.querySelector("#burger-button-close");
+const NAVIGATION_ITEMS_MOBILE = document.querySelectorAll(".mobile-nav__link");
+
+BURGER_MENU_BUTTON_OPEN.addEventListener("click", e =>
+  MOBILE_NAVIGATION_WINDOW.classList.add("mobile-nav--open")
+);
+
+BURGER_MENU_BUTTON_CLOSE.addEventListener("click", e =>
+  MOBILE_NAVIGATION_WINDOW.classList.remove("mobile-nav--open")
+);
+
+NAVIGATION_ITEMS_MOBILE.forEach(item =>
+  item.addEventListener("click", e =>
+    MOBILE_NAVIGATION_WINDOW.classList.remove("mobile-nav--open")
+  )
+);
+
+document.addEventListener("scroll", e => {
+  const currentPosition = window.scrollY;
+
+  NAVIGATION_ITEMS_MOBILE.forEach(item => {
+    const block = document.querySelector(item.getAttribute("href"));
+    if (
+      currentPosition + HOME_BLOCK_HEIGHT >= block.offsetTop &&
+      currentPosition < block.offsetTop + block.offsetHeight
+    ) {
+      NAVIGATION_ITEMS_MOBILE.forEach(item =>
+        item.classList.remove("mobile-nav__link--active")
+      );
+      item.classList.add("mobile-nav__link--active");
     }
   });
 });
